@@ -14,16 +14,9 @@ const images = [
 ];
 
 const galleryList = document.querySelector('.gallery');
-
-const elements = images.map(({ url, alt }) => {
-	const imageItemEl = document.createElement('li');
-
-	const imageEl = document.createElement('img');
-	imageEl.src = url;
-	imageEl.alt = alt;
-	imageEl.classList.add('gallery__image');
-	imageItemEl.appendChild(imageEl);
-	return imageItemEl;
-});
+const elements = images
+	.map(({ url, alt }) => `<li><img class='gallery__image' src="${url}" alt="${alt}" ></img></li>`)
+	.join('');
 console.log(elements);
-galleryList.append(...elements);
+
+galleryList.insertAdjacentHTML('afterbegin', elements);
