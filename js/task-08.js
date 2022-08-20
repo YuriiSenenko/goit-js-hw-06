@@ -1,8 +1,5 @@
 const refs = {
 	formEl: document.querySelector('.login-form'),
-	inputEmailEl: document.querySelector('input[type=email]'),
-	inputPasswordEl: document.querySelector('input[type=password]'),
-	buttonSubmitEl: document.querySelector('button[type=submit]'),
 };
 
 refs.formEl.addEventListener('submit', onFormSubmit);
