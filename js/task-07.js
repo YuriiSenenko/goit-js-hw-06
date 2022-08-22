@@ -3,7 +3,7 @@ const refs = {
 	spanEl: document.querySelector('#text'),
 };
 
-refs.inputEl.addEventListener('input', onInputChange);
+refs.inputEl.addEventListener('mousemove', onInputChange);
 
 function onInputChange(event) {
 	refs.spanEl.style.fontSize = event.currentTarget.value + 'px';
